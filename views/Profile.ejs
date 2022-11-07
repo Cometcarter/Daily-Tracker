@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Daily Tracker</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="/profile">Home</a></li>
+        <li><a href="/completedtask">Log</a></li>
+      </ul>
+    </nav>
+    <div class="page-header text-center">
+      <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+      <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+      <!-- LOCAL INFORMATION -->
+      <div class="col-sm-6">
+        <div class="well">
+          <h3><span class="fa fa-user"></span> Local</h3>
+
+          <% if (user.local.email) { %>
+            <p>
+              <strong>id</strong>: <%= user._id %><br>
+                <strong>email</strong>: <%= user.local.email %><br>
+                  <strong>password</strong>: <%= user.local.password %>
+            </p>
+
+            <a href="/unlink/local" class="btn btn-default">Unlink</a>
+            <% } else { %>
+              <a href="/connect/local" class="btn btn-default">Connect Local</a>
+              <% } %>
+
+        </div>
+      </div>
+
+      <form action="/tracklist" method="POST">
+        <div class="container">
+          <input type="text" placeholder="Task to be done.." name="task" required>
+          <input type="radio" name="priority" value="HIGH" required>High priority
+          <input type="radio" name="priority" value="MED" required>Medium priority
+          <input type="radio" name="priority" value="LOW" required>Low priority
+          <button type="submit" id="add">Add</button>
+        </div>
+      </form>
+
+      <ul>
+        <% for(var i=0; i<trackerdata.length; i++) {%>
+          <li class="message">
+            <span>
+              <%= trackerdata[i].task%>
+            </span>
+            <span>
+              <%= trackerdata[i].priority%>
+            </span>
+            <form action="/completedtask" method="POST">
+              <input type="hidden" name="task" value="<%= trackerdata[i].task%>">
+              <input type="hidden" name="priority" value="<%= trackerdata[i].priority%>">
+              <button type="submit">Complete</button>
+            </form>
+            <button type="button" onclick="deleteItem(this)">Delete</button>
+          </li>
+          <% } %>
+      </ul>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
