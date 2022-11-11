@@ -4,7 +4,7 @@
 // get all the tools we need
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8000;
 const MongoClient = require('mongodb').MongoClient
 var mongoose = require('mongoose');
 //what we use to talk to out mongodb

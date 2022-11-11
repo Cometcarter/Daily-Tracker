@@ -1,7 +1,114 @@
-body{
-  padding-top:80px;
-  word-wrap:break-word;
+body {
+  box-sizing: border-box;
 }
-img{
+
+img {
   height: 200px;
 }
+
+.well {
+  display: none;
+}
+
+.xanh {
+  font-family: 'Xanh Mono', monospace;
+}
+
+/* ================================INDEX================================== */
+.full-background {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(./img/back.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, .5);
+  width: 80vw;
+  max-width: 37.5em;
+  padding: 3em 2.5em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 45%;
+  left: 25%;
+  border-radius: 0.62em;
+  box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25)
+}
+
+.index-title {
+  font-size: 3.5em;
+  padding-bottom: 5%;
+}
+
+.index-p {
+  font-size: 1.5em;
+}
+
+.btn-index {
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  min-width: 0;
+  outline: none;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  margin: 1% 3%;
+}
+
+.btn-index:disabled {
+  pointer-events: none;
+}
+
+.btn-index:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.btn-index:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+/* ================================INDEX================================== */
+
+
+/* ================================LOGIN================================== */
+.login-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-login {
+  margin-top: 1%;
+}
+
+/* ================================LOGIN================================== */
+
+
+/* ================================SIGNUP================================== */
+/* ================================SIGNUP================================== */
+
+
+
+/* ================================PROFILE================================== */
+/* ================================PROFILE================================== */
+
+
+/* ================================LOG================================== */
+/* ================================LOG================================== */
