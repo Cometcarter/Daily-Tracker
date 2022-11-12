@@ -14,18 +14,9 @@ img {
   font-family: 'Xanh Mono', monospace;
 }
 
-/* ================================INDEX================================== */
-.full-background {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  background-image: url(./img/back.PNG);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.container {
+.login-container,
+.signup-container,
+.index-container {
   background-color: rgba(255, 255, 255, .5);
   width: 80vw;
   max-width: 37.5em;
@@ -36,6 +27,17 @@ img {
   left: 25%;
   border-radius: 0.62em;
   box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25)
+}
+
+/* ================================INDEX================================== */
+.full-background {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(./img/back.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .index-title {
@@ -87,7 +89,6 @@ img {
 
 /* ================================INDEX================================== */
 
-
 /* ================================LOGIN================================== */
 .login-container {
   display: flex;
@@ -102,11 +103,57 @@ img {
 
 
 /* ================================SIGNUP================================== */
+.signup-container {
+  display: flex;
+  justify-content: center;
+}
+
 /* ================================SIGNUP================================== */
 
 
 
 /* ================================PROFILE================================== */
+.profile-container-1 {
+  background-color: rgba(255, 255, 255, .5);
+  width: 80vw;
+  max-width: 37.5em;
+  padding: 3em 2.5em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 50%;
+  border-radius: 0.62em;
+  box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25)
+}
+
+.profile-container-2 {
+  background-color: rgba(255, 255, 255, .5);
+  width: 80vw;
+  max-width: 37.5em;
+  padding: 3em 2.5em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 46%;
+  left: 50%;
+  border-radius: 0.62em;
+  box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25)
+}
+
+.taskinput {
+  width: 100%;
+}
+
+.form-check-input {
+  margin: 2%;
+  margin-left: 5%;
+}
+
+#add {
+  width: 80%;
+  margin-left: 10%;
+}
+
+
 /* ================================PROFILE================================== */
 
 
